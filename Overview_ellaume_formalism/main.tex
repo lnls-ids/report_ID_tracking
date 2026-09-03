@@ -1,0 +1,195 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[top=3cm, left=2cm, bottom=2cm, right=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{siunitx}
+\usepackage{physics, amsmath, amsfonts, amssymb}
+\usepackage{todonotes}
+\usepackage{float}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage{microtype}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=violet,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    citecolor=blue,
+    }
+%----------------------------------------------------------------------------------------
+% Edita cabeçalho e rodapé
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\usepackage{verbatim}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    bookmarks=true,
+    % pdfpagemode=FullScreen,
+    } 
+    
+\lhead{
+\begin{minipage}{5cm}\vspace{-1.5cm}\hspace{-1cm} 
+\includegraphics[width=1.0\linewidth]{header}
+% \includegraphics[width=0.2\linewidth]{lnls.png}
+\end{minipage}}
+\chead{LNLS/Sirius \\ Accelerator Physics Group - FAC }
+\rhead{}  % Date
+\lfoot{}  % Author
+\cfoot{\thepage}
+% \lfoot{}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+
+\urlstyle{same}
+
+\title{Impact of IVU18 on Sirius dynamic aperture}
+\author{Gabriel Rezende}
+\date{March 2023}
+
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhf{}
+
+
+
+% \lhead{
+% \begin{minipage}{5cm}\vspace{-0.7cm}\hspace{-1cm} 
+% \includegraphics[width=1.0\linewidth]{header}
+% % \includegraphics[width=0.2\linewidth]{lnls.png}
+% \end{minipage}}
+% % \chead{LNLS/Sirius \\ Física de Aceleradores - FAC }
+% % \rhead{\today}
+% % \lfoot{}
+% \rfoot{\thepage}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{1pt}
+
+
+\begin{document}
+
+
+
+\makeatletter
+\begin{titlepage}
+\begin{center}
+    {\large Brazilian Synchrotron Light Laboratory}\\
+    \vspace{7cm}
+    {\Large\uppercase{\@author}\\
+    \vspace{2cm}
+    {\uppercase{\textbf{\@title}}}}\\
+\end{center}
+\vspace{2cm}
+\begin{flushright}
+
+\end{flushright}
+\vspace{4cm}
+\begin{center}
+    {\large
+    Campinas - SP\\
+   \@date}
+\end{center}
+\end{titlepage}
+\makeatother
+
+\newpage
+\tableofcontents 
+\newpage
+\section{Introduction} 
+\par
+The IVU18 is a new in-vacuum-undulator that will be installed on two SIRIUS low-beta straight sections. Nowadays IVU18 is in the project phase and its specifications are not fully closed yet, especially regarding the roll-off ones. High roll-off values can lead to the arising of strong integrated multipole components on the straight section of the IDs and high-order multipole components can be prejudicial to SIRIUS's dynamic aperture. 
+\par
+The first roll-off specification proposed was $0.01\%$ at $x=6$ mm for a minimum gap of 4.3 mm. This value, however, implies large widths for the magnetic blocks (64 mm), and as a consequence, the force necessary to keep the gap opened is high (about 30 kN for the minimum gap). To reduce the magnetic force a new roll-off specification was proposed ($0.5\%$ at 6 mm). This document reports the effect of an IVU18 with such fields on the SIRIUS's dynamic aperture. 
+
+\section{Simulations results}
+\par The following figure shows the field roll-off for blocks with widths 64 mm, 31 mm, and 29 mm. These fields were calculated using the IMA group "insertion-devices" library (\url{https://github.com/lnls-ima/insertion-devices}), which makes use of the software RADIA. The subdivisions adopted for these calculations were [8, 4, 4] for the magnetic blocks and [34, 5, 5] for the poles.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{field-rolloff.png}
+\caption{Field roll-off for different block widths}
+\label{fig:fieldrolloff}
+\end{figure}
+
+As it's possible to see in figure \ref{fig:fieldrolloff} blocks with 31 mm width provide a field roll-off of $0.47\%$ very near the new specified value, while a 29 mm width provides a roll-off almost 2.5 bigger.
+
+\subsection{Comparisons between roll-offs}
+\par Considering the different configurations for the IVU18 blocks cited above, tracking simulations were done to estimate the effect of this ID on the dynamic aperture.
+
+\begin{figure}[H]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal.png} 
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-64.png}
+\end{subfigure}
+\caption{The left image shows the nominal dynamic aperture, while the right image shows the dynamic aperture after the insertion of an IVU18 with 64 mm block widths.}
+\label{fig:dynapt_nominal_64}
+\end{figure}
+
+\begin{figure}[H]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-31-gap4.png} 
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-29-gap4.png}
+\end{subfigure}
+\caption{These images are the dynamic aperture after the insertion of an IVU18 with block widths of 31 mm and 29 mm respectively}
+\label{fig:dynapt_31_29}
+\end{figure}
+
+\par By comparing the effect of the insertion device for different block widths it is possible to see that the effect of a 64 mm block is almost the same as a 31 mm block or even a 29 mm block. The boundaries do not experience considerable changes, and, even though the diffusion increases with the insertion of the ID, it does not change considerably with the variation of roll-off (for the range considered).
+
+
+\subsection{Higher gaps for block widths of 31 mm}
+\par Although the effect of the ID on the beam decreases as the gap increases, the effects on dynamic aperture were also calculated for gaps 10 mm and 20 mm. The field amplitudes for these gaps are 0.4 T and 0.007 T respectively.
+
+\begin{figure}[H]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-31-gap10.png} 
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-31-gap20.png}
+\end{subfigure}
+\caption{Dynamic aperture for block widths of 31 mm, on gaps 10 mm and 20 mm respectively}
+\label{fig:dynapt_31-10-20}
+\end{figure}
+
+
+\subsection{Higher gaps for block widths of 29 mm}
+
+\begin{figure}[H]
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-29-gap10.png} 
+\end{subfigure}
+\begin{subfigure}{0.5\textwidth}
+\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-29-gap20.png}
+\end{subfigure}
+\caption{Dynamic aperture for block widths of 31 mm, on gaps 10 mm and 20 mm respectively}
+\label{fig:dynapt_29-10-20}
+\end{figure}
+
+
+\section{Conclusion}
+\par With the results shown here, it is possible to conclude that the biggest effect on the dynamic aperture happens after the insertion of the IVU18 and does not change considerably when the widths of the blocks are reduced to the values considered here, therefore, the reduction of the roll-off specification for $0.5\%$ will not affect the dynamic aperture.
+
+\bibliography{refs}
+\bibliographystyle{apalike}
+     \nocite{*}
+\end{document}
