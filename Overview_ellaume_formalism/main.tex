@@ -14,6 +14,7 @@
 \usepackage{subcaption}
 \usepackage{verbatim}
 \usepackage{xcolor}
+\usepackage{mathtools}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -59,9 +60,9 @@
 
 \urlstyle{same}
 
-\title{Impact of IVU18 on Sirius dynamic aperture}
+\title{Overview of ID tracking methods}
 \author{Gabriel Rezende}
-\date{March 2023}
+\date{September 2026}
 
 % \usepackage{fancyhdr}
 % \pagestyle{fancy}
@@ -113,12 +114,61 @@
 \newpage
 \section{Introduction} 
 \par
-The IVU18 is a new in-vacuum-undulator that will be installed on two SIRIUS low-beta straight sections. Nowadays IVU18 is in the project phase and its specifications are not fully closed yet, especially regarding the roll-off ones. High roll-off values can lead to the arising of strong integrated multipole components on the straight section of the IDs and high-order multipole components can be prejudicial to SIRIUS's dynamic aperture. 
-\par
-The first roll-off specification proposed was $0.01\%$ at $x=6$ mm for a minimum gap of 4.3 mm. This value, however, implies large widths for the magnetic blocks (64 mm), and as a consequence, the force necessary to keep the gap opened is high (about 30 kN for the minimum gap). To reduce the magnetic force a new roll-off specification was proposed ($0.5\%$ at 6 mm). This document reports the effect of an IVU18 with such fields on the SIRIUS's dynamic aperture. 
+This document presents a detailed overview of insertion devices tracking methods.
+The first section is an introduction to the Ellaume formalism, derivations and predicted effects
+on the beam. The second section presents the tracking method based on Runge-Kutta integration and compares 
+results with those obtained from the Ellaume formalism. Finally, last section presents an symplectic integration method
+proposed by Wu, Forest and Robin and also compares the results with the two first methods. The main goal of this document
+ is to provide a complete overview of the methods used to track
+  insertion devices in the SIRIUS storage ring and to compare their results.
 
-\section{Simulations results}
-\par The following figure shows the field roll-off for blocks with widths 64 mm, 31 mm, and 29 mm. These fields were calculated using the IMA group "insertion-devices" library (\url{https://github.com/lnls-ima/insertion-devices}), which makes use of the software RADIA. The subdivisions adopted for these calculations were [8, 4, 4] for the magnetic blocks and [34, 5, 5] for the poles.
+\section{Ellaume formalism}
+\subsection{Equations of motion}
+Using SIRIUS coordinate system, the equations of motion for a particle in a magnetic field can be expressed as:
+\begin{equation}
+    \frac{d\vec{p}}{dt} = q\vec{v} \times \vec{B}
+    \label{eq:lorentz_force}
+\end{equation}
+$\vec{p}$ is the momentum of the electron, $q= -e$ is the electron's charge, $\vec{v}$ is its velocity, and $\vec{B}$ is
+the magnetic field along the electron's path.
+The velocity can be written as:
+\begin{equation}
+    \vec{v} = \frac{dx}{dt}\hat{x} + \frac{dy}{dt}\hat{y} + \frac{ds}{dt}\hat{s} = 
+    \left(\frac{ds}{dt}\right)\left(\frac{dx}{ds}\hat{x} + \frac{dy}{ds}\hat{y} + \hat{s}\right)
+    \label{eq:velocity}
+\end{equation}
+defining
+\begin{equation}
+    x\prime \coloneqq \frac{dx}{ds}, \quad y\prime \coloneqq \frac{dy}{ds}
+    \label{eq:prime}
+\end{equation}
+and assuming the electorn is ultra-relativitic, we have:
+\begin{equation}
+    c^2 = \vec{v}^2 = \left(\frac{ds}{dt}\right)^2(x\prime^2 + y\prime^2 + 1)
+\end{equation}
+then, it is found the following expression for $ds/dt$:
+\begin{equation}
+    \frac{ds}{dt} = \frac{c}{\sqrt{x\prime^2 + y\prime^2 + 1}}
+\end{equation}
+which gives the expression for the velocity:
+\begin{equation}
+    \vec{v} = \frac{c}{\sqrt{x\prime^2 + y\prime^2 + 1}}\left(x\prime\hat{x} + y\prime\hat{y} + \hat{s}\right)
+\end{equation}
+Substituting this expression into the Lorentz force equation, we have:
+\begin{equation}
+    \frac{d\vec{p}}{dt} = \frac{-ec}{\sqrt{x\prime^2 + y\prime^2 + 1}}\left[(y\prime B_s-B_y)\hat{x} -(x\prime B_s-B_x)\hat{y} + (x\prime By-y\prime Bx)\hat{s}\right]
+    \label{eq:lorentz_force_expanded}
+\end{equation}
+Keeping the result of equation \eqref{eq:lorentz_force_expanded}, now let's express the momentum of a relativistic electron:
+\begin{equation}
+    \vec{p} = \gamma m_e \vec{v} = \frac{\gamma m_e c}{\sqrt{x\prime^2 + y\prime^2 + 1}}\left(x\prime\hat{x} + y\prime\hat{y} + \hat{s}\right)
+\end{equation}
+and it's time derivative:
+\begin{equation}
+    \frac{d\vec{p}}{dt} = \frac{ds}{dt}\frac{d\vec{p}}{ds} = \frac{\gamma m_e c^2}{\sqrt{x\prime^2 + y\prime^2 + 1}}
+    \left[-(x\prime^2+y\prime^2+1)^{-3/2}(x\prime x\prime \prime + y\prime y\prime \prime)(x\prime\hat{x} + y\prime\hat{y} + \hat{s})
+    + \frac{x\prime\prime\hat{x} + y\prime\prime\hat{y}}{\sqrt{x\prime^2 + y\prime^2 + 1}}\right]
+\end{equation}
 
 \begin{figure}[H]
 \centering
@@ -127,11 +177,7 @@ The first roll-off specification proposed was $0.01\%$ at $x=6$ mm for a minimum
 \label{fig:fieldrolloff}
 \end{figure}
 
-As it's possible to see in figure \ref{fig:fieldrolloff} blocks with 31 mm width provide a field roll-off of $0.47\%$ very near the new specified value, while a 29 mm width provides a roll-off almost 2.5 bigger.
-
 \subsection{Comparisons between roll-offs}
-\par Considering the different configurations for the IVU18 blocks cited above, tracking simulations were done to estimate the effect of this ID on the dynamic aperture.
-
 \begin{figure}[H]
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal.png} 
@@ -139,52 +185,10 @@ As it's possible to see in figure \ref{fig:fieldrolloff} blocks with 31 mm width
 \begin{subfigure}{0.5\textwidth}
 \includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-64.png}
 \end{subfigure}
-\caption{The left image shows the nominal dynamic aperture, while the right image shows the dynamic aperture after the insertion of an IVU18 with 64 mm block widths.}
+\caption{The left image shows the nominal dynamic aperture, while the right image shows
+ the dynamic aperture after the insertion of an IVU18 with 64 mm block widths.}
 \label{fig:dynapt_nominal_64}
 \end{figure}
-
-\begin{figure}[H]
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-31-gap4.png} 
-\end{subfigure}
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-29-gap4.png}
-\end{subfigure}
-\caption{These images are the dynamic aperture after the insertion of an IVU18 with block widths of 31 mm and 29 mm respectively}
-\label{fig:dynapt_31_29}
-\end{figure}
-
-\par By comparing the effect of the insertion device for different block widths it is possible to see that the effect of a 64 mm block is almost the same as a 31 mm block or even a 29 mm block. The boundaries do not experience considerable changes, and, even though the diffusion increases with the insertion of the ID, it does not change considerably with the variation of roll-off (for the range considered).
-
-
-\subsection{Higher gaps for block widths of 31 mm}
-\par Although the effect of the ID on the beam decreases as the gap increases, the effects on dynamic aperture were also calculated for gaps 10 mm and 20 mm. The field amplitudes for these gaps are 0.4 T and 0.007 T respectively.
-
-\begin{figure}[H]
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-31-gap10.png} 
-\end{subfigure}
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-31-gap20.png}
-\end{subfigure}
-\caption{Dynamic aperture for block widths of 31 mm, on gaps 10 mm and 20 mm respectively}
-\label{fig:dynapt_31-10-20}
-\end{figure}
-
-
-\subsection{Higher gaps for block widths of 29 mm}
-
-\begin{figure}[H]
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-29-gap10.png} 
-\end{subfigure}
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-29-gap20.png}
-\end{subfigure}
-\caption{Dynamic aperture for block widths of 31 mm, on gaps 10 mm and 20 mm respectively}
-\label{fig:dynapt_29-10-20}
-\end{figure}
-
 
 \section{Conclusion}
 \par With the results shown here, it is possible to conclude that the biggest effect on the dynamic aperture happens after the insertion of the IVU18 and does not change considerably when the widths of the blocks are reduced to the values considered here, therefore, the reduction of the roll-off specification for $0.5\%$ will not affect the dynamic aperture.
