@@ -139,59 +139,104 @@ The velocity can be written as:
 \end{equation}
 defining
 \begin{equation}
-    x\prime \coloneqq \frac{dx}{ds}, \quad y\prime \coloneqq \frac{dy}{ds}
+    x^{\prime} \coloneqq \frac{dx}{ds}, \quad y^{\prime} \coloneqq \frac{dy}{ds}
     \label{eq:prime}
 \end{equation}
 and assuming the electorn is ultra-relativitic, we have:
 \begin{equation}
-    c^2 = \vec{v}^2 = \left(\frac{ds}{dt}\right)^2(x\prime^2 + y\prime^2 + 1)
+    c^2 = \vec{v}^2 = \left(\frac{ds}{dt}\right)^2(x^{\prime 2} + y^{\prime 2} + 1)
 \end{equation}
 then, it is found the following expression for $ds/dt$:
 \begin{equation}
-    \frac{ds}{dt} = \frac{c}{\sqrt{x\prime^2 + y\prime^2 + 1}}
+    \frac{ds}{dt} = \frac{c}{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}
 \end{equation}
 which gives the expression for the velocity:
 \begin{equation}
-    \vec{v} = \frac{c}{\sqrt{x\prime^2 + y\prime^2 + 1}}\left(x\prime\hat{x} + y\prime\hat{y} + \hat{s}\right)
+    \vec{v} = \frac{c}{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}\left(x^{\prime}\hat{x} + y^{\prime}\hat{y} + \hat{s}\right)
 \end{equation}
 Substituting this expression into the Lorentz force equation, we have:
 \begin{equation}
-    \frac{d\vec{p}}{dt} = \frac{-ec}{\sqrt{x\prime^2 + y\prime^2 + 1}}\left[(y\prime B_s-B_y)\hat{x} -(x\prime B_s-B_x)\hat{y} + (x\prime By-y\prime Bx)\hat{s}\right]
+    \frac{d\vec{p}}{dt} = \frac{-ec}{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}\left[(y^{\prime} B_s-B_y)\hat{x} -(x^{\prime} B_s-B_x)\hat{y} + (x^{\prime} By-y^{\prime} Bx)\hat{s}\right]
     \label{eq:lorentz_force_expanded}
 \end{equation}
 Keeping the result of equation \eqref{eq:lorentz_force_expanded}, now let's express the momentum of a relativistic electron:
 \begin{equation}
-    \vec{p} = \gamma m_e \vec{v} = \frac{\gamma m_e c}{\sqrt{x\prime^2 + y\prime^2 + 1}}\left(x\prime\hat{x} + y\prime\hat{y} + \hat{s}\right)
+    \vec{p} = \gamma m_e \vec{v} = \frac{\gamma m_e c}{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}\left(x^{\prime}\hat{x} + y^{\prime}\hat{y} + \hat{s}\right)
 \end{equation}
 and it's time derivative:
 \begin{equation}
-    \frac{d\vec{p}}{dt} = \frac{ds}{dt}\frac{d\vec{p}}{ds} = \frac{\gamma m_e c^2}{\sqrt{x\prime^2 + y\prime^2 + 1}}
-    \left[-(x\prime^2+y\prime^2+1)^{-3/2}(x\prime x\prime \prime + y\prime y\prime \prime)(x\prime\hat{x} + y\prime\hat{y} + \hat{s})
-    + \frac{x\prime\prime\hat{x} + y\prime\prime\hat{y}}{\sqrt{x\prime^2 + y\prime^2 + 1}}\right]
+    \frac{d\vec{p}}{dt} = \frac{ds}{dt}\frac{d\vec{p}}{ds} = \frac{\gamma m_e c^2}{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}
+    \left[-(x^{\prime 2}+y^{\prime 2}+1)^{-3/2}(x^{\prime} x^{\prime\prime} + y^{\prime} y^{\prime\prime})(x^{\prime}\hat{x} + y^{\prime}\hat{y} + \hat{s})
+    + \frac{x^{\prime\prime}\hat{x} + y^{\prime\prime}\hat{y}}{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}\right]
+    \label{eq:momentum_derivative}
+\end{equation}
+Then, using the magnetic rigidity $R = \gamma m_e c / e$ and equating the $\hat{s}$ component of equations \eqref{eq:lorentz_force_expanded}
+and \eqref{eq:momentum_derivative}, we have:
+\begin{equation}
+    \frac{x{^\prime}x^{\prime\prime} + y^{\prime}y^{\prime\prime}}{\left(x^{\prime 2} + y^{\prime 2 } + 1\right)^{3/2}} = \frac{1}{R}\left(x^{\prime}B_y - y^{\prime}B_x\right)
+\end{equation}
+substituting equation above into equation \eqref{eq:momentum_derivative}, the remaining two vector components are related by
+\begin{equation}
+    \frac{-1}{R}\left(x^{\prime} B_y - y^{\prime} B_x \right)\left(x^{\prime}\hat{x} + y^{\prime}\hat{y}\right)
+     + \frac{x^{\prime \prime}\hat{x} + y^{\prime\prime}\hat{y}}{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}} = \frac{-1}{R}
+     \left[\left(y^{\prime}B_s - B_y\right)\hat{x} + \left(x^{\prime}B_s - B_x\right)\right]
+\end{equation}
+Solving this equation for $x^{\prime\prime}$ and $y^{\prime\prime}$, we have the following equations of motion:
+\begin{equation}
+    \begin{aligned}
+        x^{\prime\prime} = -\frac{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}{R}\left[x^{\prime}y^{\prime}B_x -\left(x^{\prime 2} + 1\right)By +y^{\prime}Bs\right]\\
+        y^{\prime\prime} = -\frac{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}{R}\left[\left(y^{\prime 2} + 1\right)B_x -x^{\prime}y^{\prime}By -x^{\prime}Bs\right]
+    \end{aligned}
+    \label{eq:equations_of_motion}
 \end{equation}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.8\textwidth]{field-rolloff.png}
-\caption{Field roll-off for different block widths}
-\label{fig:fieldrolloff}
-\end{figure}
+\subsection{First-order solutions to the equations of motion}
+\par Assuming the transverse velocity of the electrons is zero, the equations of motion reduce to:
+\begin{equation}
+    \begin{aligned}
+        x^{\prime\prime} = \frac{1}{R}B_y\\
+        y^{\prime\prime} = -\frac{1}{R}B_x
+    \end{aligned}
+    \label{eq:first_order_eqm}
+\end{equation}
+The integration of equation \eqref{eq:first_order_eqm} leads to:
+\begin{equation}
+    \begin{aligned}
+        x^{\prime}(s) = \frac{1}{R}\int_{-\infty}^{s} B_y(0, 0, s^{\prime}) ds^{\prime}\\
+        y^{\prime}(s) = -\frac{1}{R}\int_{\infty}^{s}B_x(0, 0, s^{\prime}) ds^{\prime}\\
+        x(s) = \frac{1}{R}\int_{\infty}^{s}\int_{\infty}^{s^{\prime}}B_y(0, 0, s^{\prime\prime}) ds^{\prime\prime} ds^{\prime}\\
+        y(s) = -\frac{1}{R}\int_{\infty}^{s}\int_{\infty}^{s^{\prime}}B_x(0, 0, s^{\prime\prime}) ds^{\prime\prime} ds^{\prime}\\
+    \end{aligned}
+    \label{eq:field_integrals}
+\end{equation} 
+These are the so called field integrals. These equations are a good approximation for elements like quadrupoles, sextupoles and correctors,
+ but for a well designed insertion device, the field integrals are close to zero, and thus the first-order solutions are not enough to describe
+  the electron's motion. In this case, it is necessary to consider the second-order solutions to the equations of motion.
 
-\subsection{Comparisons between roll-offs}
-\begin{figure}[H]
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal.png} 
-\end{subfigure}
-\begin{subfigure}{0.5\textwidth}
-\includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-64.png}
-\end{subfigure}
-\caption{The left image shows the nominal dynamic aperture, while the right image shows
- the dynamic aperture after the insertion of an IVU18 with 64 mm block widths.}
-\label{fig:dynapt_nominal_64}
-\end{figure}
+\subsection{Second-order solutions to the equations of motion}
+
+% \begin{figure}[H]
+% \centering
+% \includegraphics[width=0.8\textwidth]{field-rolloff.png}
+% \caption{Field roll-off for different block widths}
+% \label{fig:fieldrolloff}
+% \end{figure}
+
+% \subsection{Comparisons between roll-offs}
+% \begin{figure}[H]
+% \begin{subfigure}{0.5\textwidth}
+% \includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal.png} 
+% \end{subfigure}
+% \begin{subfigure}{0.5\textwidth}
+% \includegraphics[width=1\linewidth, height=7cm]{dynapt-nominal-ids-symm-64.png}
+% \end{subfigure}
+% \caption{The left image shows the nominal dynamic aperture, while the right image shows
+%  the dynamic aperture after the insertion of an IVU18 with 64 mm block widths.}
+% \label{fig:dynapt_nominal_64}
+% \end{figure}
 
 \section{Conclusion}
-\par With the results shown here, it is possible to conclude that the biggest effect on the dynamic aperture happens after the insertion of the IVU18 and does not change considerably when the widths of the blocks are reduced to the values considered here, therefore, the reduction of the roll-off specification for $0.5\%$ will not affect the dynamic aperture.
+\par oi
 
 \bibliography{refs}
 \bibliographystyle{apalike}

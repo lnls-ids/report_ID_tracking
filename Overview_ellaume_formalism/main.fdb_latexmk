@@ -1,5 +1,5 @@
 # Fdb version 4
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 0 0
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1788978523.97855 0
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   "main.aux" 0 -1 0 "pdflatex"
   "refs.bib" 0 -1 0 ""
@@ -7,13 +7,12 @@
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1788963436.95455 "/opt/mamba_files/mamba/envs/optics/repos/report_ID_tracking/Overview_ellaume_formalism/main.tex" "main.pdf" "main" 1788963437.78701 2
-  "/opt/mamba_files/mamba/envs/optics/repos/report_ID_tracking/Overview_ellaume_formalism/main.tex" 1788963435.86669 6730 2fcb5a73b44b34c1547c1973ed9d8574 ""
+["pdflatex"] 1788978523.19855 "/opt/mamba_files/mamba/envs/optics/repos/report_ID_tracking/Overview_ellaume_formalism/main.tex" "main.pdf" "main" 1788978523.97866 0
+  "/opt/mamba_files/mamba/envs/optics/repos/report_ID_tracking/Overview_ellaume_formalism/main.tex" 1788978522.23426 9388 54e0d158854691f94c5595aa3b7164b0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1202520719 2327 9d6df24f9c4f7368395224341a95523a ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc" 1254269338 2359 de53213020575850c8f8debc35095765 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
@@ -32,7 +31,6 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm" 1254269338 11948 fa976674f030491ad35532a8a1e37325 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm" 1254269338 11836 e3b6ce3e601aec94f64a536e7f4224d5 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm" 1254269338 11864 309fd7f43e4a0ba39f6f7644d76e8edf ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmtt12.tfm" 1254269338 1336 3f1d3798f35e35601b79a222d795ee97 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb" 1255129361 116908 1fca96723793882c2e0160350c192fc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb" 1254269338 23055 2e5b42921de910eaa97b85df04ca4891 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb" 1254269338 30696 2654571912f9cd384da9f7cb8a60c568 ""
@@ -41,8 +39,8 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb" 1255129361 119752 1bd8d06e4079df624bf59ce3ad7c9aa6 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb" 1255129361 122174 a7a08406857c9530a0320a2517f60370 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb" 1254269338 27863 09ce3735688ffde955e72da27c95b61a ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy6.pfb" 1254269338 28109 6d61305ed3d0eb794ebe36f15cf44aa0 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb" 1254269338 27802 5c876bb2c4040caaf035d60bd74a86bd ""
-  "/usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmtt12.pfb" 1255129361 110323 92daea7ca7b4120bd2b54b047c93be27 ""
   "/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/atbegshi/atbegshi.sty" 1575674566 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
   "/usr/local/texlive/2024/texmf-dist/tex/generic/babel-english/english.ldf" 1496785618 7008 9ff5fdcc865b01beca2b0fe4a46231d4 ""
@@ -171,7 +169,6 @@
   "/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omslmsy.fd" 1616454256 807 3de192f3efa968913bd2f096a7b430d8 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/lm/omxlmex.fd" 1616454256 568 a5494d810f2680caf10205cd1226c76c ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmr.fd" 1616454256 1882 28c08db1407ebff35a658fd141753d16 ""
-  "/usr/local/texlive/2024/texmf-dist/tex/latex/lm/ot1lmtt.fd" 1616454256 2713 c40650b5e64f743884fe5c8bc940e517 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty" 1728349409 62711 3b0ed1d68b598a75677c10d16646d5e5 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty" 1616101747 5582 a43dedf8e5ec418356f1e9dfe5d29fc3 ""
   "/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype-pdftex.def" 1711748042 48246 4fd40a0fb055e75ab59718b607ff1a02 ""
@@ -209,15 +206,12 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1732819232 5476123 0aaf5f0b94d004f6c94b5aad0957af23 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1732819312 3343777 042f8b08d4fbde28199a02d22edb0f98 ""
   "/usr/local/texlive/2024/texmf.cnf" 1732819228.544 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
-  "dynapt-nominal-ids-symm-64.png" 0 -1 0 ""
-  "dynapt-nominal.png" 0 -1 0 ""
-  "field-rolloff.png" 0 -1 0 ""
   "header.jpg" 1788382542 306336 d8148dc9299fa5286a9a73182335611c ""
-  "main.aux" 1788963437.5427 2015 abc16613ee3cf630199939ae1fe41cb2 "pdflatex"
+  "main.aux" 1788978523.75828 1738 18e036c6103017a8d57e5892922a2ea6 "pdflatex"
   "main.bbl" 0 -1 0 "bibtex main"
-  "main.out" 1788963437.5427 693 8047a0a636179bc8169144617d5071e3 "pdflatex"
-  "main.tex" 1788963435.86669 6730 2fcb5a73b44b34c1547c1973ed9d8574 ""
-  "main.toc" 1788963437.5427 417 45884d936fa79893ecc25c9e8981f9dc "pdflatex"
+  "main.out" 1788978523.75828 1120 fde099e916baf89cad09870f2869a460 "pdflatex"
+  "main.tex" 1788978522.23426 9388 54e0d158854691f94c5595aa3b7164b0 ""
+  "main.toc" 1788978523.75828 551 da9620ce9e9b53ea39223e009678cee0 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
