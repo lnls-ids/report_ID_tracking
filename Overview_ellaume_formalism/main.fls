@@ -369,6 +369,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT ./header.jpg
 INPUT ./header.jpg
 INPUT ./header.jpg
+INPUT ./header.jpg
+INPUT ./header.jpg
+INPUT ./header.jpg
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

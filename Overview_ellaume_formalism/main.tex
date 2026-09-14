@@ -156,7 +156,7 @@ which gives the expression for the velocity:
 \end{equation}
 Substituting this expression into the Lorentz force equation, we have:
 \begin{equation}
-    \frac{d\vec{p}}{dt} = \frac{-ec}{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}\left[(y^{\prime} B_s-B_y)\hat{x} -(x^{\prime} B_s-B_x)\hat{y} + (x^{\prime} By-y^{\prime} Bx)\hat{s}\right]
+    \frac{d\vec{p}}{dt} = \frac{-ec}{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}\left[(y^{\prime} B_s-B_y)\hat{x} -(x^{\prime} B_s-B_x)\hat{y} + (x^{\prime} B_y-y^{\prime} B_x)\hat{s}\right]
     \label{eq:lorentz_force_expanded}
 \end{equation}
 Keeping the result of equation \eqref{eq:lorentz_force_expanded}, now let's express the momentum of a relativistic electron:
@@ -184,8 +184,8 @@ substituting equation above into equation \eqref{eq:momentum_derivative}, the re
 Solving this equation for $x^{\prime\prime}$ and $y^{\prime\prime}$, we have the following equations of motion:
 \begin{equation}
     \begin{aligned}
-        x^{\prime\prime} = -\frac{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}{R}\left[x^{\prime}y^{\prime}B_x -\left(x^{\prime 2} + 1\right)By +y^{\prime}Bs\right]\\
-        y^{\prime\prime} = -\frac{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}{R}\left[\left(y^{\prime 2} + 1\right)B_x -x^{\prime}y^{\prime}By -x^{\prime}Bs\right]
+        x^{\prime\prime} = -\frac{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}{R}\left[x^{\prime}y^{\prime}B_x -\left(x^{\prime 2} + 1\right)B_y +y^{\prime}Bs\right]\\
+        y^{\prime\prime} = -\frac{\sqrt{x^{\prime 2} + y^{\prime 2} + 1}}{R}\left[\left(y^{\prime 2} + 1\right)B_x -x^{\prime}y^{\prime}B_y -x^{\prime}Bs\right]
     \end{aligned}
     \label{eq:equations_of_motion}
 \end{equation}
@@ -203,17 +203,58 @@ The integration of equation \eqref{eq:first_order_eqm} leads to:
 \begin{equation}
     \begin{aligned}
         x^{\prime}(s) = \frac{1}{R}\int_{-\infty}^{s} B_y(0, 0, s^{\prime}) ds^{\prime}\\
-        y^{\prime}(s) = -\frac{1}{R}\int_{\infty}^{s}B_x(0, 0, s^{\prime}) ds^{\prime}\\
-        x(s) = \frac{1}{R}\int_{\infty}^{s}\int_{\infty}^{s^{\prime}}B_y(0, 0, s^{\prime\prime}) ds^{\prime\prime} ds^{\prime}\\
-        y(s) = -\frac{1}{R}\int_{\infty}^{s}\int_{\infty}^{s^{\prime}}B_x(0, 0, s^{\prime\prime}) ds^{\prime\prime} ds^{\prime}\\
+        y^{\prime}(s) = -\frac{1}{R}\int_{-\infty}^{s}B_x(0, 0, s^{\prime}) ds^{\prime}\\
+        x(s) = \frac{1}{R}\int_{-\infty}^{s}\int_{-\infty}^{s^{\prime}}B_y(0, 0, s^{\prime\prime}) ds^{\prime\prime} ds^{\prime}\\
+        y(s) = -\frac{1}{R}\int_{-\infty}^{s}\int_{-\infty}^{s^{\prime}}B_x(0, 0, s^{\prime\prime}) ds^{\prime\prime} ds^{\prime}\\
     \end{aligned}
     \label{eq:field_integrals}
 \end{equation} 
 These are the so called field integrals. These equations are a good approximation for elements like quadrupoles, sextupoles and correctors,
- but for a well designed insertion device, the field integrals are close to zero, and thus the first-order solutions are not enough to describe
-  the electron's motion. In this case, it is necessary to consider the second-order solutions to the equations of motion.
+ but for a well designed insertion device, the field integrals evaluated in the whole ID are close to zero, and thus the first-order solutions are not enough to describe
+  the net effect of the undulator on the electron beam. In this case, it is necessary to consider the second-order solutions to the equations of motion.
 
 \subsection{Second-order solutions to the equations of motion}
+
+In the second-order solutions we will keep terms only to the second order of the inverse of the magnetic rigidity $1/R^2$. Looking at equations 
+\eqref{eq:field_integrals} we can see that all phase space variables are proportional do $1/R$, so we will keep terms only to the first order of the
+phase space variables, then the equations of motion become:
+
+\begin{equation}
+    \begin{aligned}
+        x^{\prime\prime} = \frac{1}{R}\left(y^{\prime}B_s - B_y\right)\\
+        y^{\prime\prime} = -\frac{1}{R}\left(B_x - x^{\prime}B_s\right)
+    \end{aligned}
+    \label{eq:second_order_eqm}
+\end{equation}
+
+Next, we are going to Taylor expand the magnetic field around the reference trajectory.
+\begin{equation}
+    \begin{aligned}
+        B_y(x, y, s) = B_y(0, 0, s) + x\frac{\partial B_y}{\partial x}(0, 0, s) + y\frac{\partial B_y}{\partial y}(0, 0, s) + \mathcal{O}(2)\\
+        B_x(x, y, s) = B_x(0, 0, s) + x\frac{\partial B_x}{\partial x}(0, 0, s) + y\frac{\partial B_x}{\partial y}(0, 0, s) + \mathcal{O}(2)
+    \end{aligned}
+    \label{eq:field_expanded}
+\end{equation}
+then, combining equations \eqref{eq:field_expanded} and \eqref{eq:second_order_eqm} we obtain the following form for the equations of motion:
+\begin{equation}
+    \begin{aligned}
+        x^{\prime\prime} = -\frac{1}{R}\left[y^{\prime}B_s^{0} - B_y^{0} - x\frac{\partial B_y}{\partial x}^{0} - y\frac{\partial B_y}{\partial y}^{0}\right]\\
+        y^{\prime\prime} = -\frac{1}{R}\left[B_x^{0} + x\frac{\partial B_x}{\partial x}^{0} + y\frac{\partial B_x}{\partial y}^{0} - x^{\prime}B_s^{0}\right]
+    \end{aligned}
+\end{equation}
+
+where the supscript $^0$ denotes the evaluation in the reference point ($0, 0, s$).
+\begin{equation}
+    \begin{aligned}
+        \Delta x^{\prime} = \int_{-\infty}^{\infty}x^{\prime \prime}ds = \frac{1}{R^2}\int_{-\infty}^{\infty}\left[B_s^{0}\int_{-\infty}^{s}B_x^{0}ds^{\prime}
+        +\frac{\partial B_y^0}{\partial x}\int_{-\infty}^{s}\int_{-\infty}^{s^{\prime}}B_y^{0}ds^{\prime \prime}ds^{\prime}
+        -\frac{\partial B_y^0}{\partial y}\int_{-\infty}^{s}\int_{-\infty}^{s^{\prime}}B_x^{0}ds^{\prime \prime}ds^{\prime}\right]ds \\
+        \Delta y^{\prime} = \int_{-\infty}^{\infty}y^{\prime \prime}ds = \frac{1}{R^2}\int_{-\infty}^{\infty}\left[B_s^{0}\int_{-\infty}^{s}B_y^{0}ds^{\prime}
+        +\frac{\partial B_x^0}{\partial y}\int_{-\infty}^{s}\int_{-\infty}^{s^{\prime}}B_x^{0}ds^{\prime \prime}ds^{\prime}
+        -\frac{\partial B_x^0}{\partial x}\int_{-\infty}^{s}\int_{-\infty}^{s^{\prime}}B_y^{0}ds^{\prime \prime}ds^{\prime}\right]ds
+    \end{aligned}
+   \label{eq:second_order_solutions_integral} 
+\end{equation}
 
 % \begin{figure}[H]
 % \centering
@@ -234,6 +275,8 @@ These are the so called field integrals. These equations are a good approximatio
 %  the dynamic aperture after the insertion of an IVU18 with 64 mm block widths.}
 % \label{fig:dynapt_nominal_64}
 % \end{figure}
+\subsection{Kickmaps}
+
 
 \section{Conclusion}
 \par oi

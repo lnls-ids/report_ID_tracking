@@ -4,4 +4,5 @@
 \contentsline {subsection}{\numberline {2.1}Equations of motion}{2}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}First-order solutions to the equations of motion}{3}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Second-order solutions to the equations of motion}{3}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Conclusion}{3}{section.3}%
+\contentsline {subsection}{\numberline {2.4}Kickmaps}{4}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Conclusion}{4}{section.3}%
