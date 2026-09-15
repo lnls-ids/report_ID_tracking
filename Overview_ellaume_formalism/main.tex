@@ -241,9 +241,13 @@ then, combining equations \eqref{eq:field_expanded} and \eqref{eq:second_order_e
         x^{\prime\prime} = -\frac{1}{R}\left[y^{\prime}B_s^{0} - B_y^{0} - x\frac{\partial B_y}{\partial x}^{0} - y\frac{\partial B_y}{\partial y}^{0}\right]\\
         y^{\prime\prime} = -\frac{1}{R}\left[B_x^{0} + x\frac{\partial B_x}{\partial x}^{0} + y\frac{\partial B_x}{\partial y}^{0} - x^{\prime}B_s^{0}\right]
     \end{aligned}
+    \label{eq:second_order_eqm_simplified}
 \end{equation}
 
-where the supscript $^0$ denotes the evaluation in the reference point ($0, 0, s$).
+where the supscript $^0$ denotes the evaluation in the reference point ($0, 0, s$). When we insert the first-order solutions (which
+are valid for the electron motion inside the device, since the field integrals are close to zero only when we integrate over the whole ID), into 
+equation \eqref{eq:second_order_eqm_simplified}, and integrate over the whole ID we obtain the following expressions for kick experienced by the
+electron:
 \begin{equation}
     \begin{aligned}
         \Delta x^{\prime} = \int_{-\infty}^{\infty}x^{\prime \prime}ds = \frac{1}{R^2}\int_{-\infty}^{\infty}\left[B_s^{0}\int_{-\infty}^{s}B_x^{0}ds^{\prime}
@@ -256,6 +260,9 @@ where the supscript $^0$ denotes the evaluation in the reference point ($0, 0, s
    \label{eq:second_order_solutions_integral} 
 \end{equation}
 
+\par Equation \eqref{eq:second_order_solutions_integral} gives the kick experienced by an electron due to its wiggling motion through the ID,
+which is a kickmap. However, the kickmap equation is not in its final form, it is possible to express the kickmap in terms
+ of a potential called Kickmap Potential.
 % \begin{figure}[H]
 % \centering
 % \includegraphics[width=0.8\textwidth]{field-rolloff.png}
