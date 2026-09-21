@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  15 SEP 2026 11:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  21 SEP 2026 16:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -889,12 +889,11 @@ Overfull \hbox (12.4651pt too wide) detected at line 261
 [][][][][]
  []
 
-No file main.bbl.
 
 
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
-Package pdftex.def Info: header.jpg  used on input line 294.
+Package pdftex.def Info: header.jpg  used on input line 310.
 (pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -903,7 +902,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-15.85004pt}.
 
-[4] (./main.aux)
+[4]
+No file main.bbl.
+
+
+File: header.jpg Graphic file (type jpg)
+<use header.jpg>
+Package pdftex.def Info: header.jpg  used on input line 364.
+(pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.85004pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.85004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-15.85004pt}.
+
+[5] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
@@ -912,18 +926,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 307438F8B2699BAEBAD14330D20ABF81;1217.
  ) 
 Here is how much of TeX's memory you used:
- 31430 strings out of 473330
- 628256 string characters out of 5719768
- 1118043 words of memory out of 5000000
- 54003 multiletter control sequences out of 15000+600000
+ 31447 strings out of 473330
+ 628503 string characters out of 5719768
+ 1120315 words of memory out of 5000000
+ 54011 multiletter control sequences out of 15000+600000
  587830 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,18n,121p,1088b,954s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (5 pages, 456779 bytes).
+Output written on main.pdf (6 pages, 462575 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 31 named destinations out of 1000 (max. 500000)
+ 174 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
  16458 words of extra memory for PDF output out of 17280 (max. 10000000)
 
