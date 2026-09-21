@@ -285,16 +285,29 @@ which is a kickmap. However, the kickmap equation is not in its final form, it i
 \subsection{Kickmaps}
 \par In order to transform equation \eqref{eq:second_order_solutions_integral} in the usual form, it is necssary to make 
 use of Maxwell equations and integration by parts.
-First, consider the diverfence of the magnetic filed in free space $\vec{\nabla} \cdot \vec{B} = 0$
+First, consider the divergence of the magnetic filed in free space $\vec{\nabla} \cdot \vec{B} = 0$
 \begin{equation}
     \frac{\partial B_{x}^{0}}{\partial x} + \frac{\partial B_{y}^{0}}{\partial y} + \frac{\partial B_{s}^{0}}{\partial s} = 0
     \label{eq:divergence_free}
 \end{equation}
 
+which allow us to write $B_s$ as function of the transverse components of the magnetic field:
+
+\begin{equation}
+    B_s^{0} = \int_{-\infty}^{s}\frac{\partial B_s^{0}}{\partial s^{\prime}}ds^{\prime} =
+     -\int_{-\infty}^{s}\frac{\partial B_x^{0}}{\partial x}ds^{\prime} - \int_{-\infty}^{s}\frac{\partial B_y^{0}}{\partial y}ds^{\prime}
+     \label{eq:Bs_integral}
+\end{equation}
+
+Now, consider the integration by parts formula:
+
 \begin{equation}
     \int_{a}^{b}f(s)g^{\prime}(s)ds = \left[f(s)g(s)\right]_{a}^{b} - \int_{a}^{b}f^{\prime}(s)g(s)ds
     \label{eq:int_parts}
 \end{equation}
+
+then, the second term of equation \eqref{eq:second_order_solutions_integral} can be rewritten as, where it was used
+also the fact that the second integral of the transverse field components are zero.
 
 \begin{equation}
     \begin{aligned}
@@ -309,12 +322,15 @@ First, consider the diverfence of the magnetic filed in free space $\vec{\nabla}
     \label{eq:second_term}
 \end{equation}
 
+the same simplification can be done for the third term of equation \eqref{eq:second_order_solutions_integral}:
 \begin{equation}
     \int_{-\infty}^{\infty}\left[\frac{\partial B_y^{0}}{\partial y}\int_{-\infty}^{s}\int_{-\infty}^{s^{\prime}}B_{x}^{0}ds^{\prime \prime}
     ds^{\prime}\right]ds = -\int_{-\infty}^{\infty}\left[\int_{-\infty}^{s}\frac{\partial B_y^{0}}{\partial y}ds^{\prime}
     \int_{-\infty}^{s}B_x^{0}ds^{\prime}\right]
     \label{eq:third_term}
 \end{equation}
+
+and considering equations \eqref{eq:Bs_integral}, \eqref{eq:second_term} and \eqref{eq:third_term}, we can rewrite the horizontal kick as:
 
 \begin{equation}
     \begin{aligned}
@@ -334,11 +350,15 @@ First, consider the diverfence of the magnetic filed in free space $\vec{\nabla}
         \label{eq:delta_x_prime_final}
 \end{equation}
 
+the vertical kick can also be written in the following form:
 \begin{equation}
     \Delta y^{\prime} = - \frac{1}{R^2}\int_{-\infty}^{\infty}\frac{\partial}{\partial y}\Bigg[\left(\int_{-\infty}^{s}B_x^{0}ds^{\prime}\right)^2 +
         \left(\int_{-\infty}^{s}B_y^{0}ds^{\prime}\right)^2 \Bigg]ds
     \label{eq:delta_y_prime_final}
 \end{equation}
+
+Equations \eqref{eq:delta_x_prime_final} and \eqref{eq:delta_y_prime_final} can be expressed in terms of a potential $\Phi(x, y)$, called Kickmap Potential, as follows:
+
 
 \begin{equation}
     \Phi(x, y) = \int_{-\infty}^{\infty}\left(\int_{-\infty}^{s}B_x(x, y, s^{\prime}ds^{\prime})\right)^2 + 
