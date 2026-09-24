@@ -428,7 +428,7 @@ Considering now a vertical magnetic field with a sinusoidal profile
     B_y = \sum_{n} a_n \sin(n k_s s)
     \label{eq:sinusoidal_field}
 \end{equation}
-It is necessary to impose that the magnetic field must be zero at the entrance and exit of the device, ie, $B_y(-\infty) = 0$.
+It is necessary to impose that the magnetic field must be zero at the entrance and exit of the device, ie, $B_y(\pm \infty) = 0$.
 Then the first integral of equation \eqref{eq:kickmap_potential} is:
 \begin{equation}
     I = \int_{-\infty}^{s}B_y(s^{\prime})ds^{\prime} = \sum_{n}\frac{-a_n}{nk_s}\cos(n k_s s)
@@ -446,9 +446,23 @@ If the horizontal component of the field is considered, the kickmap potential ca
     \Phi(x, y) = \frac{L \lambda^2}{8\pi^2}\sum_{n}\frac{a_n(x, y)^2 + b_n(x, y)^2}{n^2}
     \label{eq:kickmap_potential_sinusoidal_2D}
 \end{equation}
-where $b_n$ are the Fourier components of the horizontal field.
-This approach is useful for calculating the kickmap potential of any undulator, one just need to calculate the Fourier components of the field, without any prior knowledge of the field profile,
-and then use equation \eqref{eq:kickmap_potential_sinusoidal_2D}.
+where $b_n$ are the Fourier components of the horizontal magnetic field.
+
+This approach can be used to calculate the kickmap potential of an arbitrary undulator.
+ The only information required is the set of Fourier components of the magnetic field, no prior knowledge
+  of the complete field profile is necessary. Once these coefficients are obtained, the kickmap
+   potential can be calculated using Eq. \eqref{eq:kickmap_final}.
+
+To obtain the kickmap, the potential must be differentiated with respect to the transverse coordinates.
+ An elegant approach is to fit the kickmap potential using a two-dimensional polynomial. The derivatives
+  can then be calculated analytically by operating directly on the polynomial coefficients, from which
+   the kickmap is obtained. This approach avoids numerical differentiation, which can introduce noise
+    when the grid used to calculate the kickmap potential is not sufficiently fine.
+
+Furthermore, as discussed in the previous section, representing the kickmap potential
+ as a polynomial ensures the symplecticity of the resulting kickmap, provided that the polynomial
+  is sufficiently smooth. In particular, polynomials have continuous second derivatives, so Schwarz's
+   theorem guarantees the equality of the mixed partial derivatives required by the symplecticity condition.
 
 \subsection{Application for an adjustable-phase undulator}
 
