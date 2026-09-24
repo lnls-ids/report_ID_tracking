@@ -423,6 +423,33 @@ the symplecticity condition for the $4D$ case is satisfied. This can be seen by 
 
 \subsection{Application for a sinusoidal field}
 
+Considering now a vertical magnetic field with a sinusoidal profile
+\begin{equation}
+    B_y = \sum_{n} a_n \sin(n k_s s)
+    \label{eq:sinusoidal_field}
+\end{equation}
+It is necessary to impose that the magnetic field must be zero at the entrance and exit of the device, ie, $B_y(-\infty) = 0$.
+Then the first integral of equation \eqref{eq:kickmap_potential} is:
+\begin{equation}
+    I = \int_{-\infty}^{s}B_y(s^{\prime})ds^{\prime} = \sum_{n}\frac{-a_n}{nk_s}\cos(n k_s s)
+    \label{eq:first_integral_sinusoidal}
+\end{equation}
+And the external integral of equation \eqref{eq:kickmap_potential} is:
+\begin{equation}
+    \Phi(x, y) = \int_{-\infty}^{\infty} I^2 ds = n_p \sum_{n}\frac{a_n^2}{2 n^2 k_s^2}\int_{\lambda/2}^{-\lambda/2}\cos(n k_s s)ds =
+     \frac{L \lambda^2}{8\pi^2}\sum_{n}\frac{a_n(x, y)^2}{n^2}
+    \label{eq:kickmap_potential_sinusoidal}
+\end{equation}
+where $L$ is the length of the device, $\lambda$ is the period of the device and $n_p$ is the number of periods.
+If the horizontal component of the field is considered, the kickmap potential can be written as:
+\begin{equation}
+    \Phi(x, y) = \frac{L \lambda^2}{8\pi^2}\sum_{n}\frac{a_n(x, y)^2 + b_n(x, y)^2}{n^2}
+    \label{eq:kickmap_potential_sinusoidal_2D}
+\end{equation}
+where $b_n$ are the Fourier components of the horizontal field.
+This approach is useful for calculating the kickmap potential of any undulator, one just need to calculate the Fourier components of the field, without any prior knowledge of the field profile,
+and then use equation \eqref{eq:kickmap_potential_sinusoidal_2D}.
+
 \subsection{Application for an adjustable-phase undulator}
 
 \section{Conclusion}
