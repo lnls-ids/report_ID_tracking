@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  21 SEP 2026 16:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  24 SEP 2026 15:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -836,7 +836,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 
 
-<header.jpg, id=50, 3307.35625pt x 1239.63126pt>
+<header.jpg, id=65, 3307.35625pt x 1239.63126pt>
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
 Package pdftex.def Info: header.jpg  used on input line 114.
@@ -903,12 +903,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.85004pt}.
 
 [4]
-No file main.bbl.
-
 
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
-Package pdftex.def Info: header.jpg  used on input line 384.
+Package pdftex.def Info: header.jpg  used on input line 400.
 (pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -917,27 +915,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-15.85004pt}.
 
-[5] (./main.aux)
+[5]
+No file main.bbl.
+
+
+File: header.jpg Graphic file (type jpg)
+<use header.jpg>
+Package pdftex.def Info: header.jpg  used on input line 434.
+(pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 27.85004pt, for example:
+(fancyhdr)                \setlength{\headheight}{27.85004pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-15.85004pt}.
+
+[6] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 307438F8B2699BAEBAD14330D20ABF81;1217.
+(rerunfilecheck)             Checksum: BA089407EB646DADA892067F5464C0BB;1931.
  ) 
 Here is how much of TeX's memory you used:
- 31453 strings out of 473330
- 628570 string characters out of 5719768
- 1120349 words of memory out of 5000000
- 54012 multiletter control sequences out of 15000+600000
- 588004 words of font info for 88 fonts, out of 8000000 for 9000
+ 31472 strings out of 473330
+ 628874 string characters out of 5719768
+ 1121463 words of memory out of 5000000
+ 54019 multiletter control sequences out of 15000+600000
+ 588178 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,18n,121p,1088b,954s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (6 pages, 463565 bytes).
+Output written on main.pdf (7 pages, 471738 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 16458 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 211 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 16482 words of extra memory for PDF output out of 17280 (max. 10000000)
 

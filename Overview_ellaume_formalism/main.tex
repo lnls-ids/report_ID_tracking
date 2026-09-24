@@ -48,7 +48,7 @@
 \includegraphics[width=1.0\linewidth]{header}
 % \includegraphics[width=0.2\linewidth]{lnls.png}
 \end{minipage}}
-\chead{LNLS/Sirius \\ Accelerator Physics Group - FAC }
+\chead{LNLS/Sirius \\ Insertion Devices and Photon Diagnostic - IDS }
 \rhead{}  % Date
 \lfoot{}  % Author
 \cfoot{\thepage}
@@ -357,7 +357,7 @@ the vertical kick can also be written in the following form:
     \label{eq:delta_y_prime_final}
 \end{equation}
 
-Equations \eqref{eq:delta_x_prime_final} and \eqref{eq:delta_y_prime_final} can be expressed in terms of a potential $\Phi(x, y)$, called Kickmap Potential, as follows:
+Equations \eqref{eq:delta_x_prime_final} and \eqref{eq:delta_y_prime_final} can be expressed in terms of a potential $\Phi(x, y)$, called Kickmap potential, as follows:
 
 
 \begin{equation}
@@ -374,6 +374,56 @@ Equations \eqref{eq:delta_x_prime_final} and \eqref{eq:delta_y_prime_final} can 
     \label{eq:kickmap_final}
 \end{equation}
 
+
+\subsection{Symplecticity conditions}
+
+\par Once we obtained the kickmap in terms of the kickmap potential, we can check if the kickmap is symplectic. 
+
+The symplecticity conditions for a 2n-D map are given by
+\begin{equation}
+    J^{T}SJ = S
+    \label{eq:symplecticity_condition}
+\end{equation}
+
+where $S$ is the $2n \times 2n$ symplectic matrix, defined in block form as
+
+\begin{equation}
+    S
+    =
+    \operatorname{diag}_{k=1,\ldots,n}
+    \left[
+    \begin{pmatrix}
+    0 & 1\\
+    -1 & 0
+    \end{pmatrix}
+    \right].
+\end{equation}
+
+where $I_n$ denotes the $n \times n$ identity matrix. $J$ is the Jacobian matrix of the map.
+Considering a $4D$ map for the kickmap, using equation \eqref{eq:kickmap_final}, the symplecticity condition \eqref{eq:symplecticity_condition}
+can be expressed as:
+
+\begin{equation}
+    \frac{\partial^2\phi}{\partial x \partial y} = \frac{\partial^2 \phi}{\partial y \partial x} \\
+    \label{eq:symplecticity_condition_kickmap}
+\end{equation}
+
+The Schwarz theorem states that if the second partial derivatives of a function are continuous, then the mixed partial derivatives are equal.
+Thus, for any kickmap potential $\Phi(x, y)$ with continuous second partial derivatives, the kickmap is symplectic, that is the case for 
+sinusoidal functions and also polynoms, which are used to describe the kickmap potential.
+
+Considering the $6D$ case, where $\Delta z = 0$ and $\Delta \delta = 0$, the symplecticity condition is also satisfied as long as
+the symplecticity condition for the $4D$ case is satisfied. This can be seen by writing the Jacobian matrix for the $6D$ case as:
+\begin{equation}
+    J = \begin{pmatrix}
+        J_{4D} & 0 \\
+        0 & I_2 \\
+    \end{pmatrix}
+\end{equation}
+
+\subsection{Application for a sinusoidal field}
+
+\subsection{Application for an adjustable-phase undulator}
 
 \section{Conclusion}
 \par oi

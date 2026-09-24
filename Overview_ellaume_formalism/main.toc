@@ -5,4 +5,7 @@
 \contentsline {subsection}{\numberline {2.2}First-order solutions to the equations of motion}{3}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Second-order solutions to the equations of motion}{3}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Kickmaps}{4}{subsection.2.4}%
-\contentsline {section}{\numberline {3}Conclusion}{5}{section.3}%
+\contentsline {subsection}{\numberline {2.5}Symplecticity conditions}{5}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Application for a sinusoidal field}{6}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Application for an adjustable-phase undulator}{6}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Conclusion}{6}{section.3}%
