@@ -494,7 +494,38 @@ then the kicks can be found by differentiating the potential with respect to the
     \end{aligned}
     \label{eq:kicks_apu}
 \end{equation}
- 
+by Taylor expanding equations \ref{eq:kicks_apu} around the origin, it is possible to find the linear
+ and nonlinear components of the kickmap, keeping only the linear terms, we found the tune-shift caused by the undulator.
+ The expression for the kicks  in linear approximation is given by:
+\begin{equation}
+    \begin{aligned}
+        \Delta x^{\prime} = -\frac{LB_0^2}{4R^2}\frac{k_x^2}{k_s^2}\left(1 + \cos{k_z\theta} - \frac{k_x^2}{k_y^2}+\frac{k_x^2}{k_y^2}\cos{k_s\theta}\right)x\\
+        \Delta y^{\prime} = -\frac{LB_0^2}{2R^2}\frac{k_y^2}{k_s^2}y
+    \end{aligned}
+    \label{eq:kicks_apu_linear}
+\end{equation}
+here, it is worth to note that for an undulator with infinite block width, the horizontal kick is zero, since $k_x = 0$, however, even
+for a finite block width, the horizontal kick is very small, since $k_x << k_y$. Even for an infinite block width, there will be a 
+vertical kick, since , in this case $k_y = k_s = \frac{2 \pi}{\lambda}$. In general the ratio of transverse kicks $\Delta y^{\prime}/\Delta x^{\prime}$
+is in the order of $2k_y^2/k_x^2$, which in the most cases is close to $10^2$.
+
+The tune shifts introduced by a quadrupolar perturbation in the storage ring are given by:
+\begin{equation}
+    \Delta \nu_{x, y} = \frac{1}{4\pi} k_{x, y}(s)\beta_{x, y}(s)L
+    \label{eq:tune_shift}
+\end{equation}
+where $k_{x, y}(s) = \frac{1}{R}\frac{dB_y}{dx}$ is the quadrupolar strength, $\beta_{x, y}(s)$ is the beta function at the location of the quadrupole and $L$ is the length of the quadrupole.
+From equation \ref{eq:kicks_apu_linear}, considering only the vertical kick we can see that the quadrupolar strength introduced by the undulator is given by:
+\begin{equation}
+    k(s) = -\frac{B_0^2}{2R}\frac{k_y^2}{k_s^2}
+    \label{eq:quadrupolar_strength}
+\end{equation}
+then, the vertical tune shift introduced by the APU is:
+
+\begin{equation}
+    \Delta \nu_y = -\frac{1}{4\pi}\frac{B_0^2}{2R}\frac{k_y^2}{k_s^2}\beta_y L
+    \label{eq:vertical_tune_shift}
+\end{equation}
 
 \section{Conclusion}
 \par oi
