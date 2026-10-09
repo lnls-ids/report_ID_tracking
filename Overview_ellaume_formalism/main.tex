@@ -466,6 +466,33 @@ Furthermore, as discussed in the previous section, representing the kickmap pote
 
 \subsection{Application for an adjustable-phase undulator}
 
+\begin{equation}
+    \begin{aligned}
+        B_y = \frac{-B_0}{2}\cos{k_xx}\left[e^{-k_y y}\sin{k_s s} + e^{k_y y}\sin{(k_s s - k_s \theta)}\right]\\
+        B_x = \frac{-B_0}{2}\frac{k_x}{k_y}\sin{k_xx}\left[e^{-k_y y}\sin{k_s s} - e^{k_y y}\sin{(k_s s - k_s \theta)}\right]\\
+        B_s = \frac{B_0}{2}\frac{k_s}{k_y}\cos{k_xx}\left[e^{-k_y y}\cos{k_s s} - e^{k_y y}\cos{(k_s s - k_s \theta)}\right]
+    \end{aligned}
+    \label{eq:apu_field}
+\end{equation}
+where $\theta$ is the undulator phase, $k_s = 2\pi/\lambda$ is the undulator wavenumber,
+$k_x = \pi/w$ is the wavenumber associated with the undulator block width $w$, and $k_y = \sqrt{k_x^2 + k_s^2}$.
+The kickmap potential for an adjustable-phase undulator can be calculated by substituting equation \eqref{eq:apu_field} into equation \eqref{eq:kickmap_potential}
+  and integrating over the undulator length. The final expression for the kickmap potential, considering both transverse components of the magnetic field, is given by:
+  \begin{equation}
+    \phi(x, y) = \frac{LB_0^2}{4}\left[\frac{1}{k_s^2}\cos{^2k_x x}\left(\cosh{2k_y y} + \cos{k_s \theta}\right) + (\frac{k_x}{k_y k_s})^2\sin^2{k_x x}\left(\cosh{2 k_y y} - \cos{k_z\theta}\right)\right]
+    \label{eq:potential_apu}
+\end{equation}
+then the kicks can be found by differentiating the potential with respect to the transverse coordinates, as shown in equation \eqref{eq:kickmap_final}, which yields to:
+
+\begin{equation}
+    \begin{aligned}
+        \Delta x^{\prime} = \frac{LB_0^2}{4R^2}\frac{k_x}{k_s^2}\sin{k_x x}\cos{k_x x}\left(\left(1-\frac{k_x^2}{k_s^2}\right)\cosh{2k_y y} + \left(1+\frac{k_x^2}{k_s^2}\right)\cos{k_s \theta}\right)\\
+        \Delta y^{\prime} = -\frac{LB_0^2}{4R^2}\frac{k_y}{k_s^2}\sinh{2 k_y y}\left(\cos^2{k_x x} + \frac{k_x^2}{k_y^2}\sin{k_x x}\right)
+    \end{aligned}
+    \label{eq:kicks_apu}
+\end{equation}
+ 
+
 \section{Conclusion}
 \par oi
 
