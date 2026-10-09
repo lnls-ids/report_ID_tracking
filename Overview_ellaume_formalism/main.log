@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  9 OCT 2026 12:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  9 OCT 2026 12:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -934,7 +934,7 @@ No file main.bbl.
 
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
-Package pdftex.def Info: header.jpg  used on input line 502.
+Package pdftex.def Info: header.jpg  used on input line 505.
 (pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -960,7 +960,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  117i,18n,121p,1088b,954s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (8 pages, 484570 bytes).
+Output written on main.pdf (8 pages, 484753 bytes).
 PDF statistics:
  234 PDF objects out of 1000 (max. 8388607)
  199 compressed objects within 2 object streams
