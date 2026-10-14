@@ -5,6 +5,12 @@ Elleaume, P. (1992).
 \newblock A new approach to the electron beam dynamics in undulators and wigglers.
 \newblock In {\em Proceedings of the Third European Particle Accelerator Conference (EPAC 92)}, pages 661--663, Berlin, Germany.
 
+\bibitem[{LNLS Accelerator Physics Group}, 2026]{lnlsfac_idanalysis}
+{LNLS Accelerator Physics Group} (2026).
+\newblock {idanalysis}: Analysis of insertion devices impact on beam dynamics.
+\newblock \url{https://github.com/lnls-fac/idanalysis}.
+\newblock Software repository, accessed October 14, 2026.
+
 \bibitem[Sands, 1970]{sands1970physics}
 Sands, M. (1970).
 \newblock The physics of electron storage rings: An introduction.

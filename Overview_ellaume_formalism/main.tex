@@ -358,7 +358,10 @@ the vertical kick can also be written in the following form:
     \label{eq:delta_y_prime_final}
 \end{equation}
 
-Equations \eqref{eq:delta_x_prime_final} and \eqref{eq:delta_y_prime_final} can be expressed in terms of a potential $\Phi(x, y)$, called Kickmap potential, as follows:
+Equations \eqref{eq:delta_x_prime_final} and \eqref{eq:delta_y_prime_final} are calculating the kicks experienced by an electron, with initial conditions $x, y = (0, 0)$, due
+ to its wiggling motion through the ID. However, these equations are valid for any initial condition $(x, y)$,
+ the set of kicks for a grid of initial conditions is a kickmap. The kickmap
+can be expressed in terms of a potential $\Phi(x, y)$, called Kickmap potential, as follows:
 
 
 \begin{equation}
@@ -401,7 +404,22 @@ where $S$ is the $2n \times 2n$ symplectic matrix, defined in block form as
 \end{equation}
 
 where $I_n$ denotes the $n \times n$ identity matrix. $J$ is the jacobian matrix of the map.
-Considering a $4D$ map for the kickmap, using equation \eqref{eq:kickmap_final}, the symplecticity condition \eqref{eq:symplecticity_condition}
+Considering a $4D$ map for the kickmap, the jacobian of the kickmap can be written as:
+
+
+\begin{equation}
+    J
+    =
+    \left[
+    \begin{pmatrix}
+    1 & 0 & 0 & 0\\
+    -\frac{1}{R^2}\frac{\partial^2\phi}{\partial^2 x} & 1 & -\frac{1}{R^2}\frac{\partial^2\phi}{\partial y \partial x}  & 0\\
+    0 & 0 & 1 & 0\\
+    -\frac{1}{R^2}\frac{\partial^2\phi}{\partial x \partial y} & 0 & -\frac{1}{R^2}\frac{\partial^2\phi}{\partial^2 y} & 1\\
+    \end{pmatrix}
+    \right].
+\end{equation}
+using equation \eqref{eq:kickmap_final}, the symplecticity condition \eqref{eq:symplecticity_condition}
 can be expressed as:
 
 \begin{equation}
@@ -459,7 +477,7 @@ To obtain the kickmap, the potential must be differentiated with respect to the 
  An elegant approach is to fit the kickmap potential using a two-dimensional polynomial. The derivatives
   can then be calculated analytically by operating directly on the polynomial coefficients, from which
    the kickmap is obtained. This approach avoids numerical differentiation, which can introduce noise
-    when the grid used to calculate the kickmap potential is not sufficiently fine.
+    when the grid used to calculate the kickmap potential is not sufficiently fine. \cite{lnlsfac_idanalysis}
 
 Furthermore, as discussed in the previous section, representing the kickmap potential
  as a polynomial ensures the symplecticity of the resulting kickmap, provided that the polynomial
