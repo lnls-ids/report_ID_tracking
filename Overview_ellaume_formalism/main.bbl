@@ -1,0 +1,19 @@
+\begin{thebibliography}{}
+
+\bibitem[Elleaume, 1992]{elleaume1992approach}
+Elleaume, P. (1992).
+\newblock A new approach to the electron beam dynamics in undulators and wigglers.
+\newblock In {\em Proceedings of the Third European Particle Accelerator Conference (EPAC 92)}, pages 661--663, Berlin, Germany.
+
+\bibitem[Sands, 1970]{sands1970physics}
+Sands, M. (1970).
+\newblock The physics of electron storage rings: An introduction.
+\newblock Technical Report SLAC-121, Stanford Linear Accelerator Center.
+
+\bibitem[Wurtz, 2014]{wurtz2014kickmaps}
+Wurtz, W.~A. (2014).
+\newblock Understanding kickmaps.
+\newblock Document dated October 24, 2014.
+\newblock Technical document.
+
+\end{thebibliography}

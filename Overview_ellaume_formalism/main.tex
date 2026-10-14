@@ -60,9 +60,9 @@
 
 \urlstyle{same}
 
-\title{Overview of ID tracking methods}
+\title{Overview of Ellaume formalism for ID tracking}
 \author{Gabriel Rezende}
-\date{September 2026}
+\date{October 2026}
 
 % \usepackage{fancyhdr}
 % \pagestyle{fancy}
@@ -114,16 +114,17 @@
 \newpage
 \section{Introduction} 
 \par
-This document presents a detailed overview of insertion devices tracking methods.
-The first section is an introduction to the Ellaume formalism, derivations and predicted effects
-on the beam. The second section presents the tracking method based on Runge-Kutta integration and compares 
-results with those obtained from the Ellaume formalism. Finally, last section presents an symplectic integration method
-proposed by Wu, Forest and Robin and also compares the results with the two first methods. The main goal of this document
- is to provide a complete overview of the methods used to track
-  insertion devices in the SIRIUS storage ring and to compare their results.
+This document presents a detailed overview of the Elaume formalism.
+The first section presents the derivations and assumptions used to obtain the kickmap potential,
+then a discussion about the symplecticity of the kickmaps is presented and an application of the formalism for
+a sinusoidal field and for an adjustable-phase undulator is shown, presenting also the effects predicted on the beam dynamics.
 
 \section{Ellaume formalism}
 \subsection{Equations of motion}
+
+The derivations presented in this section are based on the work of Ellaume \cite{elleaume1992approach} and are 
+detailed on the following tecnical report from CLS \cite{wurtz2014kickmaps}.
+
 Using SIRIUS coordinate system, the equations of motion for a particle in a magnetic field can be expressed as:
 \begin{equation}
     \frac{d\vec{p}}{dt} = q\vec{v} \times \vec{B}
@@ -361,8 +362,8 @@ Equations \eqref{eq:delta_x_prime_final} and \eqref{eq:delta_y_prime_final} can 
 
 
 \begin{equation}
-    \Phi(x, y) = \int_{-\infty}^{\infty}\left(\int_{-\infty}^{s}B_x(x, y, s^{\prime}ds^{\prime})\right)^2 + 
-    \left(\int_{-\infty}^{s}B_y(x, y, s^{\prime}ds^{\prime})\right)^2 ds
+    \Phi(x, y) = \int_{-\infty}^{\infty}\left(\int_{-\infty}^{s}B_x(x, y, s^{\prime})ds^{\prime}\right)^2 + 
+    \left(\int_{-\infty}^{s}B_y(x, y, s^{\prime})ds^{\prime}\right)^2 ds
     \label{eq:kickmap_potential}
 \end{equation}
 
@@ -399,7 +400,7 @@ where $S$ is the $2n \times 2n$ symplectic matrix, defined in block form as
     \right].
 \end{equation}
 
-where $I_n$ denotes the $n \times n$ identity matrix. $J$ is the Jacobian matrix of the map.
+where $I_n$ denotes the $n \times n$ identity matrix. $J$ is the jacobian matrix of the map.
 Considering a $4D$ map for the kickmap, using equation \eqref{eq:kickmap_final}, the symplecticity condition \eqref{eq:symplecticity_condition}
 can be expressed as:
 
@@ -413,13 +414,14 @@ Thus, for any kickmap potential $\Phi(x, y)$ with continuous second partial deri
 sinusoidal functions and also polynoms, which are used to describe the kickmap potential.
 
 Considering the $6D$ case, where $\Delta z = 0$ and $\Delta \delta = 0$, the symplecticity condition is also satisfied as long as
-the symplecticity condition for the $4D$ case is satisfied. This can be seen by writing the Jacobian matrix for the $6D$ case as:
+the symplecticity condition for the $4D$ case is satisfied. This can be seen by writing the jacobian matrix for the $6D$ case as:
 \begin{equation}
     J = \begin{pmatrix}
         J_{4D} & 0 \\
         0 & I_2 \\
     \end{pmatrix}
 \end{equation}
+where $J_{4D}$ is the $4D$ jacobian. 
 
 \subsection{Application for a sinusoidal field}
 
@@ -506,29 +508,29 @@ by Taylor expanding equations \ref{eq:kicks_apu} around the origin, it is possib
 \end{equation}
 here, it is worth to note that for an undulator with infinite block width, the horizontal kick is zero, since $k_x = 0$, however, even
 for a finite block width, the horizontal kick is very small, since $k_x << k_y$. Even for an infinite block width, there will be a 
-vertical kick, since , in this case $k_y = k_s = \frac{2 \pi}{\lambda}$. In general the ratio of transverse kicks $\Delta y^{\prime}/\Delta x^{\prime}$
-is in the order of $2k_y^2/k_x^2$, which in the most cases is close to $10^2$.
+vertical kick, since , in this case $k_y = k_s = \frac{2 \pi}{\lambda}$. In general the ratio of the gradient of the transverse kicks 
+$\frac{\Delta y^{\prime}}{\Delta y}/\frac{\Delta x^{\prime}}{\Delta x}$
+is in the order of $2k_y^2/k_x^2$, which in the most cases is close to $10^2$, that will imply that the vertical focusing will be much stronger than
+the horizontal.
 
-The tune shifts introduced by a quadrupolar perturbation in the storage ring are given by:
+The tune shifts introduced by a quadrupolar perturbation in the storage ring are given by: \cite{sands1970physics}
 \begin{equation}
-    \Delta \nu_{x, y} = \frac{1}{4\pi} k_{x, y}(s)\beta_{x, y}(s)L
+    \Delta \nu_{x, y} = -\frac{1}{4\pi} k_{x, y}(s)\beta_{x, y}(s)L
     \label{eq:tune_shift}
 \end{equation}
 where $k_{x, y}(s) = \frac{1}{R}\frac{dB_y}{dx}$ is the quadrupolar strength, $\beta_{x, y}(s)$ is the beta function at the location of the quadrupole and $L$ is the length of the quadrupole.
 From equation \ref{eq:kicks_apu_linear}, considering only the vertical kick we can see that the quadrupolar strength introduced by the undulator is given by:
 \begin{equation}
-    k(s) = -\frac{B_0^2}{2R}\frac{k_y^2}{k_s^2}
+    k(s) = -\frac{B_0^2}{2R^2}\frac{k_y^2}{k_s^2}
     \label{eq:quadrupolar_strength}
 \end{equation}
 then, the vertical tune shift introduced by the APU is:
 
 \begin{equation}
-    \Delta \nu_y = -\frac{1}{4\pi}\frac{B_0^2}{2R}\frac{k_y^2}{k_s^2}\beta_y L
+    \Delta \nu_y = \frac{1}{8\pi}\frac{B_0^2}{R^2}\frac{k_y^2}{k_s^2}\beta_y L
     \label{eq:vertical_tune_shift}
 \end{equation}
-
-\section{Conclusion}
-\par oi
+as one can observe, the vertical tune shift, is independent of the undulator phase $\theta$.
 
 \bibliography{refs}
 \bibliographystyle{apalike}

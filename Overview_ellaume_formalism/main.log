@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  9 OCT 2026 13:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.28)  14 OCT 2026 11:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -836,7 +836,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 
 
-<header.jpg, id=65, 3307.35625pt x 1239.63126pt>
+<header.jpg, id=60, 3307.35625pt x 1239.63126pt>
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
 Package pdftex.def Info: header.jpg  used on input line 114.
@@ -854,7 +854,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.114 \newpage
                [1 <./header.jpg>]
-Overfull \hbox (7.35399pt too wide) detected at line 172
+Overfull \hbox (7.35399pt too wide) detected at line 173
 [][][][] \OT1/lmr/m/n/12 = [][] = [] []
  []
 
@@ -862,7 +862,7 @@ Overfull \hbox (7.35399pt too wide) detected at line 172
 
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
-Package pdftex.def Info: header.jpg  used on input line 177.
+Package pdftex.def Info: header.jpg  used on input line 178.
 (pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -875,7 +875,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
-Package pdftex.def Info: header.jpg  used on input line 228.
+Package pdftex.def Info: header.jpg  used on input line 229.
 (pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -885,7 +885,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-15.85004pt}.
 
 [3]
-Overfull \hbox (12.4651pt too wide) detected at line 261
+Overfull \hbox (12.4651pt too wide) detected at line 262
 [][][][][]
  []
 
@@ -893,7 +893,7 @@ Overfull \hbox (12.4651pt too wide) detected at line 261
 
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
-Package pdftex.def Info: header.jpg  used on input line 311.
+Package pdftex.def Info: header.jpg  used on input line 312.
 (pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -906,7 +906,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
-Package pdftex.def Info: header.jpg  used on input line 400.
+Package pdftex.def Info: header.jpg  used on input line 401.
 (pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -919,7 +919,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
-Package pdftex.def Info: header.jpg  used on input line 462.
+Package pdftex.def Info: header.jpg  used on input line 463.
 (pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -932,7 +932,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
-Package pdftex.def Info: header.jpg  used on input line 511.
+Package pdftex.def Info: header.jpg  used on input line 515.
 (pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -941,13 +941,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-15.85004pt}.
 
-[7]
-No file main.bbl.
-
+[7] (./main.bbl)
 
 File: header.jpg Graphic file (type jpg)
 <use header.jpg>
-Package pdftex.def Info: header.jpg  used on input line 536.
+Package pdftex.def Info: header.jpg  used on input line 538.
 (pdftex.def)             Requested size: 142.26378pt x 53.3031pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -962,21 +960,21 @@ LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BA089407EB646DADA892067F5464C0BB;1931.
+(rerunfilecheck)             Checksum: 7DD8B60F2F05DD4BA551097E1EBCDDFE;1837.
  ) 
 Here is how much of TeX's memory you used:
- 31514 strings out of 473330
- 629452 string characters out of 5719768
- 1122200 words of memory out of 5000000
- 54030 multiletter control sequences out of 15000+600000
- 588961 words of font info for 99 fonts, out of 8000000 for 9000
+ 31539 strings out of 473330
+ 629865 string characters out of 5719768
+ 1122364 words of memory out of 5000000
+ 54042 multiletter control sequences out of 15000+600000
+ 593520 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,18n,121p,1088b,954s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on main.pdf (9 pages, 489525 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on main.pdf (9 pages, 508226 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 16482 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 253 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 18522 words of extra memory for PDF output out of 20736 (max. 10000000)
 

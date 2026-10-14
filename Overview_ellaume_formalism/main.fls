@@ -381,6 +381,10 @@ INPUT ./header.jpg
 INPUT ./header.jpg
 INPUT ./header.jpg
 INPUT ./header.jpg
+INPUT ./main.bbl
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm
 INPUT ./header.jpg
 INPUT ./header.jpg
 INPUT ./header.jpg
@@ -395,6 +399,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr17.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmr8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmri12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
